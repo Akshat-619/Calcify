@@ -9,9 +9,10 @@
     }
 
     function calculate() {
-      try {
-        display.value = Math.round(eval(display.value).toFixed(2));
-      } catch {
-        display.value = "Error";
-      }
-    }
+  try {
+    const result = eval(display.value);
+    display.value = parseFloat(result.toFixed(2));
+  } catch {
+    display.value = "Error";
+  }
+}
