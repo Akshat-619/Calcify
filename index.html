@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calcify</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#020617] flex flex-col items-center justify-center px-4 text-white">
+
+  <!-- Project Title -->
+  <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 md:mb-10 tracking-wide text-center">
+    Calcify
+  </h1>
+
+  <!-- Calculator -->
+  <div class="w-full max-w-[420px] sm:max-w-[480px] md:max-w-[520px] bg-[#111827]/80 backdrop-blur-lg rounded-3xl shadow-2xl p-5 sm:p-6 md:p-8 border border-zinc-700">
+
+    <!-- Display -->
+    <input
+      id="display"
+      type="text"
+      readonly
+      class="w-full h-20 sm:h-24 md:h-28 bg-[#020617] border border-zinc-700 rounded-2xl text-right text-3xl sm:text-4xl md:text-5xl px-4 sm:px-5 mb-4 sm:mb-5 md:mb-6 outline-none text-white"
+    />
+
+    <!-- Buttons -->
+    <div class="grid grid-cols-4 gap-3 sm:gap-4">
+
+      <button onclick="press('7')" class="h-14 sm:h-16 md:h-20 bg-zinc-800 rounded-2xl text-xl sm:text-2xl hover:bg-zinc-700 transition">7</button>
+      <button onclick="press('8')" class="h-14 sm:h-16 md:h-20 bg-zinc-800 rounded-2xl text-xl sm:text-2xl hover:bg-zinc-700 transition">8</button>
+      <button onclick="press('9')" class="h-14 sm:h-16 md:h-20 bg-zinc-800 rounded-2xl text-xl sm:text-2xl hover:bg-zinc-700 transition">9</button>
+      <button onclick="press('/')" class="h-14 sm:h-16 md:h-20 bg-orange-500 rounded-2xl text-xl sm:text-2xl hover:bg-orange-600 transition">/</button>
+
+      <button onclick="press('4')" class="h-14 sm:h-16 md:h-20 bg-zinc-800 rounded-2xl text-xl sm:text-2xl hover:bg-zinc-700 transition">4</button>
+      <button onclick="press('5')" class="h-14 sm:h-16 md:h-20 bg-zinc-800 rounded-2xl text-xl sm:text-2xl hover:bg-zinc-700 transition">5</button>
+      <button onclick="press('6')" class="h-14 sm:h-16 md:h-20 bg-zinc-800 rounded-2xl text-xl sm:text-2xl hover:bg-zinc-700 transition">6</button>
+      <button onclick="press('*')" class="h-14 sm:h-16 md:h-20 bg-orange-500 rounded-2xl text-xl sm:text-2xl hover:bg-orange-600 transition">*</button>
+
+      <button onclick="press('1')" class="h-14 sm:h-16 md:h-20 bg-zinc-800 rounded-2xl text-xl sm:text-2xl hover:bg-zinc-700 transition">1</button>
+      <button onclick="press('2')" class="h-14 sm:h-16 md:h-20 bg-zinc-800 rounded-2xl text-xl sm:text-2xl hover:bg-zinc-700 transition">2</button>
+      <button onclick="press('3')" class="h-14 sm:h-16 md:h-20 bg-zinc-800 rounded-2xl text-xl sm:text-2xl hover:bg-zinc-700 transition">3</button>
+      <button onclick="press('-')" class="h-14 sm:h-16 md:h-20 bg-orange-500 rounded-2xl text-xl sm:text-2xl hover:bg-orange-600 transition">-</button>
+
+      <button onclick="press('0')" class="h-14 sm:h-16 md:h-20 bg-zinc-800 rounded-2xl text-xl sm:text-2xl hover:bg-zinc-700 transition">0</button>
+      <button onclick="press('.')" class="h-14 sm:h-16 md:h-20 bg-zinc-800 rounded-2xl text-xl sm:text-2xl hover:bg-zinc-700 transition">.</button>
+      <button onclick="calculate()" class="h-14 sm:h-16 md:h-20 bg-green-600 rounded-2xl text-xl sm:text-2xl hover:bg-green-700 transition">=</button>
+      <button onclick="press('+')" class="h-14 sm:h-16 md:h-20 bg-orange-500 rounded-2xl text-xl sm:text-2xl hover:bg-orange-600 transition">+</button>
+
+      <button onclick="clearDisplay()" class="col-span-4 h-14 sm:h-16 md:h-20 bg-red-500 rounded-2xl text-xl sm:text-2xl hover:bg-red-600 transition">C</button>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <p class="mt-6 md:mt-8 text-xs sm:text-sm text-zinc-400 text-center">
+    © 2026 • Coded by Akshat Sharma
+  </p>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
