@@ -10,7 +10,7 @@
 
     function calculate() {
       try {
-        display.value = eval(display.value).toFixed(2);
+        display.value = Math.round(eval(display.value).toFixed(2));
       } catch {
         display.value = "Error";
       }
